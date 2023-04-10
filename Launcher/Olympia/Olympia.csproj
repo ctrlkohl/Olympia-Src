@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92FBF61B-8C75-4601-89E8-6819BA3201A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Olympia</RootNamespace>
+    <AssemblyName>Olympia</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Launcher\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RestSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.Text.Json" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ModernWpf" />
+    <Reference Include="ModernWpf.Controls" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="Costura\AssemblyLoader.cs" />
+    <Compile Include="GGDev_Launcher\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GGDev_Launcher\Constants.cs" />
+    <Compile Include="GGDev_Launcher\DiscordRpcDemo\DiscordRpc.cs" />
+    <Compile Include="GGDev_Launcher\Epic\Auth.cs" />
+    <Compile Include="GGDev_Launcher\Epic\devicecode.cs" />
+    <Compile Include="GGDev_Launcher\Epic\Exchange.cs" />
+    <Compile Include="GGDev_Launcher\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GGDev_Launcher\Utilities\Injector.cs" />
+    <Compile Include="GGDev_Launcher\Utilities\Win32.cs" />
+    <Compile Include="Olympia_ProcessedByFody.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RainFN_Launcher\Config_file.cs" />
+    <Compile Include="RainFN_Launcher\Config_file.Designer.cs">
+      <DependentUpon>Config_file.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RainFN_Launcher\Properties\Resources.cs" />
+    <Compile Include="RainFN_Launcher\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Costura\af-za\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\af-za\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\am-et\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\am-et\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ar-sa\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ar-sa\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\az-latn-az\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\az-latn-az\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\be-by\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\be-by\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\bg-bg\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\bg-bg\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\bn-bd\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\bn-bd\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\bs-latn-ba\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\bs-latn-ba\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ca-es\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ca-es\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\costura\dll.compressed" />
+    <EmbeddedResource Include="Costura\costura\pdb.compressed" />
+    <EmbeddedResource Include="Costura\cs-cz\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\cs-cz\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\da-dk\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\da-dk\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\de-de\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\de-de\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\el-gr\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\el-gr\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\en-gb\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\en-gb\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\es-es\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\es-es\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\es-mx\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\es-mx\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\et-ee\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\et-ee\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\eu-es\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\eu-es\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fa-ir\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fa-ir\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fi-fi\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fi-fi\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fr-ca\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fr-ca\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fr-fr\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\fr-fr\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\gl-es\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\gl-es\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ha-latn-ng\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ha-latn-ng\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\he-il\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\he-il\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\hi-in\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\hi-in\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\hr-hr\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\hr-hr\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\hu-hu\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\hu-hu\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\id-id\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\id-id\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ironpython\dll.compressed" />
+    <EmbeddedResource Include="Costura\ironpython\modules\dll.compressed" />
+    <EmbeddedResource Include="Costura\ironpython\sqlite\dll.compressed" />
+    <EmbeddedResource Include="Costura\ironpython\wpf\dll.compressed" />
+    <EmbeddedResource Include="Costura\is-is\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\is-is\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\it-it\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\it-it\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ja-jp\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ja-jp\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ka-ge\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ka-ge\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\kk-kz\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\kk-kz\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\km-kh\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\km-kh\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\kn-in\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\kn-in\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ko-kr\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ko-kr\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\lo-la\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\lo-la\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\lt-lt\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\lt-lt\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\lv-lv\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\lv-lv\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\metadata" />
+    <EmbeddedResource Include="Costura\microsoft\bcl\asyncinterfaces\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\build\framework\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\build\framework\pdb.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\build\tasks\core\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\build\tasks\core\pdb.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\build\utilities\core\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\build\utilities\core\pdb.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\dynamic\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\scripting\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\scripting\metadata\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\visualstudio\setup\configuration\interop\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\web\webview2\core\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\web\webview2\winforms\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\web\webview2\wpf\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\windowsapicodepack\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\windowsapicodepack\shell\dll.compressed" />
+    <EmbeddedResource Include="Costura\mk-mk\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\mk-mk\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ml-in\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ml-in\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\modernwpf\controls\dll.compressed" />
+    <EmbeddedResource Include="Costura\modernwpf\dll.compressed" />
+    <EmbeddedResource Include="Costura\ms-my\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ms-my\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\nb-no\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\nb-no\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\newtonsoft\json\dll.compressed" />
+    <EmbeddedResource Include="Costura\nl-nl\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\nl-nl\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\nn-no\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\nn-no\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\pl-pl\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\pl-pl\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\pt-br\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\pt-br\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\pt-pt\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\pt-pt\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\restsharp\dll.compressed" />
+    <EmbeddedResource Include="Costura\ro-ro\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ro-ro\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ru-ru\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ru-ru\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sk-sk\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sk-sk\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sl-si\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sl-si\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sq-al\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sq-al\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sr-latn-rs\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sr-latn-rs\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sv-se\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sv-se\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sw-ke\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\sw-ke\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\buffers\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\collections\immutable\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\diagnostics\diagnosticsource\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\drawing\common\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\management\automation\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\memory\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\numerics\vectors\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\runtime\compilerservices\unsafe\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\text\encodings\web\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\text\json\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\threading\tasks\extensions\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\valuetuple\dll.compressed" />
+    <EmbeddedResource Include="Costura\ta-in\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\ta-in\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\te-in\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\te-in\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\th-th\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\th-th\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\tr-tr\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\tr-tr\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\uk-ua\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\uk-ua\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\uz-latn-uz\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\uz-latn-uz\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\vi-vn\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\vi-vn\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\zh-cn\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\zh-cn\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\zh-tw\modernwpf\controls\resources\dll.compressed" />
+    <EmbeddedResource Include="Costura\zh-tw\modernwpf\resources\dll.compressed" />
+    <EmbeddedResource Include="RainFN_Launcher\Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="RainFN_Launcher\Config_file.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Config_file.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RainFN_Launcher\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="GGDev_Launcher\App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="GGDev_Launcher\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="burbankbigcondensed-black.otf" />
+    <Resource Include="oip-_35_.ico" />
+    <Resource Include="realistic-galaxy-background-space-exploration_189033-428.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

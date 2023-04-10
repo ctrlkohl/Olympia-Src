@@ -1,0 +1,183 @@
+<Window
+	x:Class="GGDev_Launcher.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:GGDev_Launcher" xmlns:ui="http://schemas.modernwpf.com/2019"
+	Title="Olympia Launcher"
+	Height="416"
+	Width="860"
+	WindowHelper.UseModernWindowStyle="True"
+	ResizeMode="CanMinimize"
+	Loaded="MainWindow_Load"
+	Closed="Save_settings">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="15*" />
+			<ColumnDefinition
+				Width="0*" />
+			<ColumnDefinition
+				Width="157*" />
+		</Grid.ColumnDefinitions>
+		<Panel.Background>
+			<ImageBrush
+				ImageSource="realistic-galaxy-background-space-exploration_189033-428.jpg" />
+		</Panel.Background>
+		<DockPanel
+			Margin="0,0,38,0"
+			Grid.ColumnSpan="3">
+			<Frame
+				Name="SettingsFrame"
+				NavigationUIVisibility="Hidden"
+				RenderTransformOrigin="0.5,0.5"
+				DockPanel.Dock="Right"
+				Width="100"
+				Navigated="SettingsFrame_Navigated">
+				<UIElement.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform />
+						<SkewTransform
+							AngleY="-0.226" />
+						<RotateTransform />
+						<TranslateTransform
+							Y="-1.496" />
+					</TransformGroup>
+				</UIElement.RenderTransform>
+			</Frame>
+		</DockPanel>
+		<Button
+			Name="LoginButton"
+			Content="Login"
+			Margin="10,339,626,13"
+			RenderTransformOrigin="0.502,0.5"
+			Foreground="#FF45F707"
+			Background="#FFAA04FB"
+			Grid.ColumnSpan="3"
+			BorderBrush="{x:Null}"
+			Click="Login_click" />
+		<Label
+			Content="Olympia"
+			HorizontalAlignment="Left"
+			Margin="16,10,0,0"
+			VerticalAlignment="Top"
+			FontFamily="Bahnschrift SemiBold"
+			FontSize="79"
+			FontWeight="Bold"
+			Foreground="#FFFFFFFF"
+			Opacity="0.8"
+			Grid.ColumnSpan="3"
+			Background="{x:Null}" />
+		<Label
+			Content=""
+			HorizontalAlignment="Left"
+			Visibility="Hidden"
+			Margin="580,0,0,12"
+			FontFamily="Segoe MDL2 Assets"
+			FontSize="48"
+			Height="50"
+			VerticalAlignment="Bottom"
+			RenderTransformOrigin="1.004,0.507"
+			Width="50"
+			Opacity="1"
+			Grid.Column="2">
+			<UIElement.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform />
+					<SkewTransform
+						AngleX="0.707" />
+					<RotateTransform />
+					<TranslateTransform
+						X="0.158" />
+				</TransformGroup>
+			</UIElement.RenderTransform>
+		</Label>
+		<Label
+			Name="Logged_in_as"
+			Visibility="Hidden"
+			Content="Logged In As:"
+			HorizontalAlignment="Left"
+			Margin="10,280,0,0"
+			VerticalAlignment="Top"
+			Grid.ColumnSpan="3" />
+		<Label
+			Name="DisplayName"
+			Visibility="Hidden"
+			Content="Invalid"
+			HorizontalAlignment="Left"
+			Margin="24,280,0,0"
+			VerticalAlignment="Top"
+			FontFamily="Segoe UI Black"
+			Height="19"
+			Grid.Column="2" />
+		<TextBox
+			Name="FN_Path"
+			Margin="16,236,211,120"
+			TextWrapping="Wrap"
+			Text="Fortnite Path"
+			Foreground="#FF1FFF00"
+			Opacity="0.8"
+			Background="#FFAA04FB"
+			Grid.ColumnSpan="3" />
+		<Button
+			Name="select_fn_path_button"
+			Content="..."
+			HorizontalAlignment="Left"
+			Margin="579,236,0,120"
+			Width="41"
+			Foreground="#FF1FFF00"
+			Background="#FFAA04FB"
+			Grid.Column="2"
+			BorderBrush="{x:Null}"
+			Click="Select_fn_path_button_Click" />
+		<CheckBox
+			Name="isDevAccount"
+			Content="Cerium"
+			HorizontalAlignment="Left"
+			Margin="625,238,0,101"
+			ClickMode="Press"
+			IsChecked="False"
+			Width="112"
+			Foreground="#FFFFFFFF"
+			BorderThickness="0,0,0,0"
+			FontSize="14"
+			Grid.Column="2"
+			Checked="isDevAccount_Checked" />
+		<Label
+			Content=""
+			Margin="529,0,-58,369"
+			FontFamily="/GGDev Launcher;component/#Burbank Big Cd Bk"
+			FontSize="14"
+			FontWeight="Bold"
+			Foreground="#FFFFFFFF"
+			Opacity="0.5"
+			Grid.Column="2"
+			Background="{x:Null}" />
+		<Button
+			Name="InfoButton"
+			Content="Info"
+			Margin="303,339,378,13"
+			RenderTransformOrigin="0.502,0.5"
+			Foreground="#FF45F707"
+			Background="#FFAA04FB"
+			Grid.Column="2"
+			BorderBrush="{x:Null}"
+			Click="Info_Click" />
+		<Button
+			Name="Fortnitekill"
+			Content="Kill Fortnite Process"
+			Margin="416,339,216,13"
+			RenderTransformOrigin="0.502,0.5"
+			Foreground="#FF45F707"
+			Background="#FFAA04FB"
+			Grid.Column="2"
+			BorderBrush="{x:Null}"
+			Click="FortniteKill_click" />
+		<Button
+			Name="Settings"
+			Content="Settings"
+			Margin="599,339,12,13"
+			RenderTransformOrigin="0.502,0.5"
+			Foreground="#FF45F707"
+			Background="#FFAA04FB"
+			Grid.Column="2"
+			BorderBrush="{x:Null}"
+			Click="Settings_click" />
+	</Grid>
+</Window>
